@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Post.ReelsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="New Reels"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/select_all"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/reel" />
+
+        <Button
+            android:id="@+id/select_video"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Select reels from Gallery"
+            android:textColor="#2A51C8"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Write a caption"
+        app:boxStrokeColor="#365AC6"
+        app:layout_constraintEnd_toEndOf="@+id/select_all"
+        app:layout_constraintStart_toStartOf="@+id/select_all"
+        app:layout_constraintTop_toBottomOf="@+id/select_all">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="visible" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/caption"
+        app:layout_constraintStart_toStartOf="@+id/caption"
+        app:layout_constraintTop_toBottomOf="@+id/caption">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:src="@drawable/reel" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Share  Reels"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Your Reel May be appearnin Reels and can be seen on the Reels tab under your profile"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/post"
+        app:layout_constraintStart_toStartOf="@+id/post"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textColor="#423F41"
+            app:strokeColor="@color/pink" />
+
+        <Button
+            android:id="@+id/post_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2957E1"
+            android:text="Post" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
